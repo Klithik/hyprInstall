@@ -324,6 +324,6 @@
             "activated": "",
             "deactivated": ""
         },
-        "on-click-right": "hyprlock"        
+        "on-click-right": "swaylock"        
     }
 }

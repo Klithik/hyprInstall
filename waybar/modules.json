@@ -148,7 +148,7 @@
 
     // Browser Launcher
     "custom/browser": {
-        "format": "",
+        "format": "",
         "on-click": "~/dotfiles/.settings/browser.sh",
         "tooltip": false
     },    
@@ -156,7 +156,7 @@
     // ChatGPT Launcher
     "custom/chatgpt": {
         "format": " ",
-        "on-click": "chromium --app=https://chat.openai.com",
+        "on-click": "firefox chat.openai.com",
         "tooltip": false
     },
 
@@ -186,7 +186,7 @@
 
     // Rofi Application Launcher
     "custom/appmenuicon": {
-        "format": "",
+        "format": "",
         "on-click": "rofi -show drun -replace",
         "on-click-right": "~/dotfiles/hypr/scripts/keybindings.sh",
         "tooltip": false
@@ -342,7 +342,7 @@
             "car": "",
             "default": ["", " ", " "]
         },
-        "on-click": "pavucontrol"
+        "on-click": "wireplumber"
     },
 
     // Bluetooth
@@ -369,6 +369,6 @@
             "activated": "",
             "deactivated": ""
         },
-        "on-click-right": "hyprlock"        
+        "on-click-right": "swaylock"        
     }
 }

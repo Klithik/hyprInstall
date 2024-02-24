@@ -5,14 +5,23 @@
 #  | || | | \__ \ || (_| | | | | |_| | |_) | (_| | (_| | ||  __/\__ \ 
 # |___|_| |_|___/\__\__,_|_|_|  \___/| .__/ \__,_|\__,_|\__\___||___/ 
 #                                    |_|                              
-# by Stephan Raabe (2024) 
+# by Stephan Raabe (2023) 
 # ----------------------------------------------------- 
 # Required: yay trizen timeshift btrfs-grub
 # ----------------------------------------------------- 
 
 sleep 1
 clear
-figlet "Updates"
+
+cat <<"EOF"
+ _   _           _       _            
+| | | |_ __   __| | __ _| |_ ___  ___ 
+| | | | '_ \ / _` |/ _` | __/ _ \/ __|
+| |_| | |_) | (_| | (_| | ||  __/\__ \
+ \___/| .__/ \__,_|\__,_|\__\___||___/
+      |_|                             
+
+EOF
 
 _isInstalledYay() {
     package="$1";
@@ -39,7 +48,7 @@ else
 fi
 echo ""
 
-if [[ $(_isInstalledYay "timeshift") == "0" ]] ;then
+if [[ $(_isInstalledYay "Timeshift") == 1 ]] ;then
     if gum confirm "DO YOU WANT TO CREATE A SNAPSHOT?" ;then
         echo ""
         c=$(gum input --placeholder "Enter a comment for the snapshot...")
@@ -56,6 +65,11 @@ if [[ $(_isInstalledYay "timeshift") == "0" ]] ;then
     fi
     echo ""
 fi
+
+echo "-----------------------------------------------------"
+echo "Start update"
+echo "-----------------------------------------------------"
+echo ""
 
 yay
 
